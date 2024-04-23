@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/notification1"
+        android:title="Notification 1" />
+
+    <item
+        android:id="@+id/notification2"
+        android:title="Notification 2" />
+
+    <item
+        android:id="@+id/notification3"
+        android:title="Notification 3" />
+
+</menu>

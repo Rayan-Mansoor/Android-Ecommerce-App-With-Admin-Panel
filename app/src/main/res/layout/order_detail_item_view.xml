@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="20dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/orderIdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="ID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderReceiverNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver Name"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderIdTV" />
+
+        <TextView
+            android:id="@+id/orderReceiverPhoneTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver Phone No."
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderReceiverNameTV" />
+
+        <TextView
+            android:id="@+id/orderReceiverEmailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver Email"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderReceiverPhoneTV" />
+
+        <TextView
+            android:id="@+id/orderReceiverAddressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receiver Address"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderReceiverEmailTV" />
+
+        <TextView
+            android:id="@+id/orderReceiverCartTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/receiverCityTV" />
+
+        <TextView
+            android:id="@+id/orderTotalAmountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartLinearLayout" />
+
+        <TextView
+            android:id="@+id/orderDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Order Placed On"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderGrandTotalTV" />
+
+        <TextView
+            android:id="@+id/orderDeliveryStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Status"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderDateTV" />
+
+        <TextView
+            android:id="@+id/receiverCompleteAddressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Address"
+            app:layout_constraintStart_toEndOf="@+id/orderReceiverAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderReceiverAddressTV" />
+
+        <TextView
+            android:id="@+id/receiverCityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            app:layout_constraintStart_toEndOf="@+id/orderReceiverAddressTV"
+            app:layout_constraintTop_toBottomOf="@+id/receiverCompleteAddressTV" />
+
+        <LinearLayout
+            android:id="@+id/cartLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/orderReceiverCartTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderReceiverCartTV"/>
+
+        <TextView
+            android:id="@+id/orderItemsTotalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items Total"
+            app:layout_constraintStart_toEndOf="@+id/orderTotalAmountTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderTotalAmountTV" />
+
+        <TextView
+            android:id="@+id/orderDeliveryFeeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Delivery Fee"
+            app:layout_constraintStart_toEndOf="@+id/orderTotalAmountTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderItemsTotalTV" />
+
+        <TextView
+            android:id="@+id/orderDiscountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount"
+            app:layout_constraintStart_toEndOf="@+id/orderTotalAmountTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderDeliveryFeeTV" />
+
+        <TextView
+            android:id="@+id/orderGrandTotalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grand Total"
+            app:layout_constraintStart_toEndOf="@+id/orderTotalAmountTV"
+            app:layout_constraintTop_toBottomOf="@+id/orderDiscountTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

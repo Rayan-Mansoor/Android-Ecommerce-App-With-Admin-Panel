@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/userHomeFragment">
+
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.example.ecommerceapp.Activities.UserHomeFragment"
+        android:label="UserHomeFragment"
+        tools:layout="@layout/fragment_user_home">
+
+        <action android:id="@+id/action_userHomeFragment_to_productDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userCartFragment"
+        android:name="com.example.ecommerceapp.Activities.UserCartFragment"
+        android:label="UserCartFragment"
+        tools:layout="@layout/fragment_user_cart"/>
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.example.ecommerceapp.Activities.UserSettingsFragment"
+        android:label="UserSettingsFragment"
+        tools:layout="@layout/fragment_user_settings"/>
+</navigation>

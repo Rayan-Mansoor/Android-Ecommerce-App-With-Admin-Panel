@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EcommerceApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoicmF5YW4tODAwOCIsImEiOiJjbHI4M3dvbncwNmsxMmt0M3puMTBzMzI3In0.Hy4UxgKEVYUsACVY7EOCXA</string>
+    <string name="firebase_web_client_id">342851368891-9jg77geglsk7t4988gvrmot6q3h733il.apps.googleusercontent.com</string>
+
+</resources>

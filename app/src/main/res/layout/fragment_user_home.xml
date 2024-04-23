@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UserHomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toTopOf="@+id/main_slider"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toTopOf="@+id/searchQuery"
+                app:srcCompat="@drawable/baseline_search_24" />
+
+
+            <com.mancj.materialsearchbar.MaterialSearchBar
+                android:id="@+id/searchQuery"
+                style="@style/MaterialSearchBarLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/inbox"
+                app:layout_constraintStart_toEndOf="@+id/searchIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:mt_maxSuggestionsCount="10"
+                app:mt_placeholder="Search Products"
+                app:mt_speechMode="true" />
+
+            <!--            <SearchView-->
+            <!--                android:id="@+id/searchQuery"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="30dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:iconifiedByDefault="false"-->
+            <!--                android:queryHint="Search Products"-->
+            <!--                app:layout_constraintEnd_toStartOf="@+id/inbox"-->
+            <!--                app:layout_constraintStart_toEndOf="@+id/backClearFocus"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <ImageButton
+                android:id="@+id/inbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toTopOf="@+id/main_slider"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintTop_toTopOf="@+id/searchQuery"
+                app:srcCompat="@drawable/baseline_all_inbox_24" />
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/main_slider"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                app:iss_auto_cycle="true"
+                app:iss_delay="1000"
+                app:iss_period="1000"
+                app:iss_placeholder="@drawable/slider1"
+                app:iss_text_align="CENTER"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/searchQuery" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins"
+                android:shadowColor="#fe7c7f"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:text="Categories"
+                android:textColor="#fe7c7f"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/main_slider" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/categoriesHorizontalSV"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <LinearLayout
+                    android:id="@+id/categoriesLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+
+            </HorizontalScrollView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/poppins"
+                android:shadowColor="#fe7c7f"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:text="All Products"
+                android:textColor="#fe7c7f"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/categoriesHorizontalSV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allProdRCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

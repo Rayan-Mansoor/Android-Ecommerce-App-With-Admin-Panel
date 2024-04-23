@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_margin="15dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="7dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orderID_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:shadowColor="@color/orange_light"
+            android:layout_margin="5dp"
+            android:maxLength="10"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"
+            android:text="Order ID"
+            android:textColor="@color/orange_light"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+
+        <TextView
+            android:id="@+id/orderReceiverName_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Receiver Name"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderID_iv" />
+
+        <TextView
+            android:id="@+id/orderAmount_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="0$"
+            android:textSize="17dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderStatus_iv" />
+
+
+        <TextView
+            android:id="@+id/orderStatus_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_margin="5dp"
+            android:textSize="17dp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/changeOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Mark Delivered"
+            android:textSize="10dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/orderStatus_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/changeMyOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Cancel Order"
+            android:textSize="10dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/orderStatus_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
