@@ -129,27 +129,4 @@ class AdminLoginActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.INVISIBLE
     }
 
-    private fun createAdmin() {
-        val adminEmail = "R3M2SC@gmail.com"
-        val adminPassword = "shoppingAppFirebase"
-
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(adminEmail.lowercase(), adminPassword)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful){
-                    Toast.makeText(applicationContext,"Admin Created Successfully", Toast.LENGTH_SHORT).show()
-
-                    val admin = AdminUser(FirebaseAuth.getInstance().uid!!, adminEmail, adminPassword)
-                    Constants.DATABASE_REFERENCE_USERS.child("Admins").push().setValue(admin)
-
-                    FirebaseAuth.getInstance().signOut()
-                }
-                else{
-                    Toast.makeText(this,"Admin Creation Failed. Try Again", Toast.LENGTH_SHORT).show()
-
-                }
-
-            }
-
-
-    }
 }
