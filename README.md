@@ -17,14 +17,23 @@
 12) Authentication using Firebase Authentication
 
 ##### Screenshots
-![User Home Page](https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/e4197213a7be996bd702e8aea760566433a009f7/Screenshots/Client%20Home.jpg) 
-User Home Page ☝️
 
+<div style="display: flex; justify-content: space-between;">
 
-![Admin Home Page](https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/d8b5109c48ee421b0966f1ff73b4e03a5398d134/Screenshots/Admin%20Home.jpg) 
-Admin Home Page ☝️
+<div style="text-align: center;">
+    <img src="https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/e4197213a7be996bd702e8aea760566433a009f7/Screenshots/Client%20Home.jpg" alt="User Home Page" width="200">
+    <p>User Home Page ☝️</p>
+</div>
 
+<div style="text-align: center;">
+    <img src="https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/d8b5109c48ee421b0966f1ff73b4e03a5398d134/Screenshots/Admin%20Home.jpg" alt="Admin Home Page" width="200">
+    <p>Admin Home Page ☝️</p>
+</div>
 
-![Checkout Page](https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/d8b5109c48ee421b0966f1ff73b4e03a5398d134/Screenshots/Checkout.jpg)
-Checkout Page ☝️
+<div style="text-align: center;">
+    <img src="https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/d8b5109c48ee421b0966f1ff73b4e03a5398d134/Screenshots/Checkout.jpg" alt="Checkout Page" width="200">
+    <p>Checkout Page ☝️</p>
+</div>
+
+</div>
 
