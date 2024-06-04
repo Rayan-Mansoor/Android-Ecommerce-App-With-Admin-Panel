@@ -18,7 +18,7 @@
 
 ##### Screenshots
 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: center;">
 
 <div style="text-align: center;">
     <img src="https://github.com/Rayan-Mansoor/Android-Ecommerce-App-With-Admin-Panel/blob/e4197213a7be996bd702e8aea760566433a009f7/Screenshots/Client%20Home.jpg" alt="User Home Page" width="200">
